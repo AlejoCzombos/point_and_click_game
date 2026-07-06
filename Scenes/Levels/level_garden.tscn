@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://blevelgarden001"]
+
+[ext_resource type="Script" path="res://Scripts/Navigation/room_manager.gd" id="1_rm"]
+[ext_resource type="PackedScene" uid="uid://broomgarden02" path="res://Scenes/Rooms/room_garden.tscn" id="2_garden"]
+
+[node name="LevelGarden" type="Node2D"]
+script = ExtResource("1_rm")
+start_room = &"garden"
+
+[node name="RoomGarden" parent="." instance=ExtResource("2_garden")]

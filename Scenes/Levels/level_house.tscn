@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://cves3uk3k6eom"]
+
+[ext_resource type="Script" uid="uid://b7e7nprih87fw" path="res://Scripts/Navigation/room_manager.gd" id="1_rm"]
+[ext_resource type="PackedScene" uid="uid://broommain001" path="res://Scenes/Rooms/room_main.tscn" id="2_main"]
+[ext_resource type="PackedScene" uid="uid://broomdrawer03" path="res://Scenes/Rooms/room_drawer.tscn" id="3_drawer"]
+[ext_resource type="PackedScene" uid="uid://broomgarden02" path="res://Scenes/Rooms/room_garden.tscn" id="4_enbkf"]
+
+[node name="LevelHouse" type="Node2D" unique_id=1323676747 groups=["Levels", "Rooms"]]
+script = ExtResource("1_rm")
+arrow_transition = 2
+
+[node name="RoomMain" parent="." unique_id=1469984609 groups=["Rooms"] instance=ExtResource("2_main")]
+
+[node name="RoomDrawer" parent="." unique_id=1917000519 groups=["Rooms"] instance=ExtResource("3_drawer")]
+
+[node name="RoomGarden" parent="." unique_id=2101128973 instance=ExtResource("4_enbkf")]

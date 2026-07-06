@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://bk1g8fytxlmup"]
+
+[ext_resource type="Texture2D" uid="uid://0ut0v2ieecvc" path="res://icon.svg" id="1_tbr3k"]
+[ext_resource type="Script" uid="uid://d7u0lev0eisf" path="res://Scripts/Components/nav_hotspot_component.gd" id="2_ph8b7"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_drawer"]
+size = Vector2(220, 160)
+
+[node name="Hotspot" type="Node2D" unique_id=517414082]
+
+[node name="Area2D" type="Area2D" parent="." unique_id=1140449787]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=1574030094]
+shape = SubResource("RectangleShape2D_drawer")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=387091587]
+position = Vector2(-2.500002, 2.5000076)
+scale = Vector2(1.7265625, 1.2421874)
+texture = ExtResource("1_tbr3k")
+
+[node name="NavHotspotComponent" type="Node" parent="." unique_id=1648275295]
+script = ExtResource("2_ph8b7")

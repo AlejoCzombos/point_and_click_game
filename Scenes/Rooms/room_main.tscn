@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://broommain001"]
+
+[node name="RoomMain" type="Node2D" unique_id=1181300570]
+
+[node name="Background" type="ColorRect" parent="." unique_id=1417244980]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0.36, 0.29, 0.22, 1)

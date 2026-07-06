@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://broomdrawer03"]
+
+[ext_resource type="PackedScene" uid="uid://bk1g8fytxlmup" path="res://Scenes/Interactive/hotspot.tscn" id="2_hs"]
+
+[node name="RoomDrawer" type="Node2D" unique_id=1893241586]
+
+[node name="Background" type="ColorRect" parent="." unique_id=56083954]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0.12, 0.12, 0.14, 1)
+
+[node name="Hotspot" parent="." unique_id=1027077254 instance=ExtResource("2_hs")]
+position = Vector2(960, 620)
