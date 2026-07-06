@@ -18,6 +18,7 @@ script = ExtResource("1_lm")
 levels = Array[ExtResource("2_wowpa")]([SubResource("Resource_wowpa")])
 
 [node name="HUD" type="CanvasLayer" parent="." unique_id=670100988]
+layer = 99
 script = ExtResource("4_hud")
 level_manager_path = NodePath("../LevelManager")
 

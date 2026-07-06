@@ -1,9 +1,17 @@
 class_name Room
-extends Resource
+extends Node
 
-@export var name: StringName
-@export var scene: PackedScene
+@export var scene_name: StringName
 @export var is_main_scene: bool
 @export var right_scene: Room
 @export var left_scene: Room
-@export var internal_scenes: Array[Scene]
+@export var internal_scenes: Array[Room]
+
+func _ready() -> void:
+	pass
+
+func has_right() -> bool:
+	return right_scene != null
+
+func has_left() -> bool:
+	return left_scene != null

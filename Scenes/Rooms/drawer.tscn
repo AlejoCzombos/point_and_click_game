@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://c6u270b23uym3"]
+
+[ext_resource type="PackedScene" uid="uid://cqgx4ws657b2q" path="res://Scenes/Items/item.tscn" id="1_fr58d"]
+
+[node name="Drawer" type="Node2D" unique_id=1893241586]
+
+[node name="Background" type="ColorRect" parent="." unique_id=56083954]
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+color = Color(0, 0.29678607, 0.29649234, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Item" parent="." unique_id=1194567880 instance=ExtResource("1_fr58d")]
+position = Vector2(1296, 400)
+
+[node name="Item2" parent="." unique_id=326629896 instance=ExtResource("1_fr58d")]
+position = Vector2(728, 338)
+
+[node name="Item3" parent="." unique_id=1570756731 instance=ExtResource("1_fr58d")]
+position = Vector2(1334, 770)
+
+[node name="Item4" parent="." unique_id=79226363 instance=ExtResource("1_fr58d")]
+position = Vector2(544, 696)

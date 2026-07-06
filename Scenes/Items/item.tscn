@@ -1,10 +1,12 @@
 [gd_scene format=3 uid="uid://cqgx4ws657b2q"]
 
-[ext_resource type="Texture2D" uid="uid://0ut0v2ieecvc" path="res://icon.svg" id="1_ys0gr"]
 [ext_resource type="Script" uid="uid://b2ycgxhyuh7l3" path="res://Scripts/Components/draggable_component.gd" id="2_76mu4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_470l7"]
 size = Vector2(283, 260.5)
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eb5tt"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
 
 [node name="Item" type="Node2D" unique_id=1194567880]
 
@@ -17,7 +19,7 @@ shape = SubResource("RectangleShape2D_470l7")
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1543665484]
 position = Vector2(1.5000038, 1.5000019)
 scale = Vector2(2.2109375, 2.0234375)
-texture = ExtResource("1_ys0gr")
+texture = SubResource("CompressedTexture2D_eb5tt")
 
 [node name="DraggableComponent" type="Node" parent="." unique_id=399029121]
 script = ExtResource("2_76mu4")

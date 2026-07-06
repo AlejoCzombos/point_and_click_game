@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bk1g8fytxlmup"]
 
+[ext_resource type="Script" uid="uid://lxjtdo5wyk34" path="res://Scripts/Interactive/hotspot.gd" id="1_ph8b7"]
 [ext_resource type="Texture2D" uid="uid://0ut0v2ieecvc" path="res://icon.svg" id="1_tbr3k"]
 [ext_resource type="Script" uid="uid://d7u0lev0eisf" path="res://Scripts/Components/nav_hotspot_component.gd" id="2_ph8b7"]
 
@@ -7,6 +8,7 @@
 size = Vector2(220, 160)
 
 [node name="Hotspot" type="Node2D" unique_id=517414082]
+script = ExtResource("1_ph8b7")
 
 [node name="Area2D" type="Area2D" parent="." unique_id=1140449787]
 

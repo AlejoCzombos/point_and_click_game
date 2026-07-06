@@ -21,7 +21,6 @@ func is_busy() -> bool:
 func get_current_level() -> Level:
 	return _current_level
 
-## Load a level by its resource.
 func load_level(level: Level) -> void:
 	if _is_loading or level == null:
 		return
@@ -43,8 +42,6 @@ func load_level(level: Level) -> void:
 	_is_loading = false
 	level_changed.emit(_current_level)
 
-## Load a level by its `name` (used by hotspots so they don't hard-depend on the
-## Level resources — avoids scene<->resource reference cycles).
 func load_level_by_name(level_name: StringName) -> void:
 	for level in levels:
 		if level and level.name == level_name:
@@ -53,6 +50,8 @@ func load_level_by_name(level_name: StringName) -> void:
 	push_error("LevelManager: no level named '%s'" % level_name)
 
 func _instance_level(level: Level) -> void:
+	print("🫃 Instanciating level'%s'" % level.name)
 	_current_level = level
 	_current_instance = level.scene.instantiate()
+	Managers.current_room_manager = _current_instance
 	add_child(_current_instance)

@@ -7,7 +7,8 @@ extends Node
 ## (which would create scene<->resource dependency cycles).
 
 @export var enabled: bool = true
-@export var target_level_name: StringName = &""
+@export var target_name: StringName = &""
+@export var hotspot_type: Constants.HotspotType
 
 var parent_node: Node2D
 var input_area: Area2D
@@ -31,13 +32,20 @@ func _find_area2d() -> Area2D:
 	return null
 
 func _on_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
-	if not enabled or target_level_name == &"":
+	if not enabled or target_name == &"":
 		return
 	if not (event is InputEventMouseButton \
 			and event.button_index == MOUSE_BUTTON_LEFT and event.pressed):
 		return
-
-	var lm := Managers.level_manager
-	if lm and not lm.is_busy():
-		get_viewport().set_input_as_handled()
-		lm.load_level_by_name(target_level_name)
+	
+	match hotspot_type:
+		Constants.HotspotType.SCENE:
+			var room_manager: RoomManager = Managers.current_room_manager
+			if room_manager and not room_manager.is_busy():
+				get_viewport().set_input_as_handled()
+				room_manager.load_room_by_name(target_name)
+		Constants.HotspotType.LEVEL:
+			var lm : LevelManager = Managers.level_manager
+			if lm and not lm.is_busy():
+				get_viewport().set_input_as_handled()
+				lm.load_level_by_name(target_name)

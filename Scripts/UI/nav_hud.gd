@@ -1,9 +1,5 @@
 extends CanvasLayer
 
-## Persistent overlay: ◀ ▶ arrows + ▼ back. Re-binds to whichever RoomManager is
-## current (levels are loaded/unloaded by the LevelManager). Arrow/back visibility
-## follows the current room's exits (from its Room resource) and the history.
-
 @export var level_manager_path: NodePath
 
 @onready var _left_button: Button = $LeftButton
@@ -24,10 +20,10 @@ func _ready() -> void:
 		return
 
 	_level_manager.level_changed.connect(_on_level_changed)
-	# The first level is loaded during LevelManager._ready (before we connected).
 	_bind_room_manager(Managers.current_room_manager)
 
 func _on_level_changed(_level: Level) -> void:
+	print("Level changed")
 	_bind_room_manager(Managers.current_room_manager)
 
 func _bind_room_manager(room_manager: RoomManager) -> void:

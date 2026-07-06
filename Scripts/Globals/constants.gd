@@ -1,8 +1,5 @@
 class_name Constants
 
-## Plain class (NOT an autoload) so it works both as a type (Constants.TransitionType)
-## and for shared constants (Constants.slide_duration).
-
 ## ---------------- Enums -----------------
 
 enum TransitionType {
@@ -14,6 +11,11 @@ enum TransitionType {
 enum Direction {
 	LEFT,
 	RIGHT,
+}
+
+enum HotspotType {
+	SCENE,
+	LEVEL
 }
 
 ## ---------------- Consts -----------------

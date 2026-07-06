@@ -3,14 +3,36 @@
 [ext_resource type="Script" uid="uid://b7e7nprih87fw" path="res://Scripts/Navigation/room_manager.gd" id="1_rm"]
 [ext_resource type="PackedScene" uid="uid://broommain001" path="res://Scenes/Rooms/room_main.tscn" id="2_main"]
 [ext_resource type="PackedScene" uid="uid://broomdrawer03" path="res://Scenes/Rooms/room_drawer.tscn" id="3_drawer"]
+[ext_resource type="Script" uid="uid://cj4jr6hiprpfo" path="res://Scripts/Navigation/room.gd" id="3_h72oq"]
 [ext_resource type="PackedScene" uid="uid://broomgarden02" path="res://Scenes/Rooms/room_garden.tscn" id="4_enbkf"]
+[ext_resource type="PackedScene" uid="uid://c6u270b23uym3" path="res://Scenes/Rooms/drawer.tscn" id="5_fhsm1"]
 
 [node name="LevelHouse" type="Node2D" unique_id=1323676747 groups=["Levels", "Rooms"]]
 script = ExtResource("1_rm")
-arrow_transition = 2
 
-[node name="RoomMain" parent="." unique_id=1469984609 groups=["Rooms"] instance=ExtResource("2_main")]
+[node name="RoomMain" parent="." unique_id=1469984609 node_paths=PackedStringArray("right_scene", "left_scene") groups=["Rooms"] instance=ExtResource("2_main")]
+script = ExtResource("3_h72oq")
+scene_name = &"mainRoom"
+is_main_scene = true
+right_scene = NodePath("../RoomDrawer")
+left_scene = NodePath("../RoomGarden")
 
-[node name="RoomDrawer" parent="." unique_id=1917000519 groups=["Rooms"] instance=ExtResource("3_drawer")]
+[node name="RoomDrawer" parent="." unique_id=1917000519 node_paths=PackedStringArray("right_scene", "left_scene", "internal_scenes") groups=["Rooms"] instance=ExtResource("3_drawer")]
+position = Vector2(1932, -6)
+script = ExtResource("3_h72oq")
+scene_name = &"drawerRoom"
+right_scene = NodePath("../RoomGarden")
+left_scene = NodePath("../RoomMain")
+internal_scenes = [NodePath("../Drawer")]
 
-[node name="RoomGarden" parent="." unique_id=2101128973 instance=ExtResource("4_enbkf")]
+[node name="Drawer" parent="." unique_id=1893241586 instance=ExtResource("5_fhsm1")]
+position = Vector2(1943, -1087)
+script = ExtResource("3_h72oq")
+scene_name = &"drawer"
+
+[node name="RoomGarden" parent="." unique_id=2101128973 node_paths=PackedStringArray("right_scene", "left_scene") groups=["Rooms"] instance=ExtResource("4_enbkf")]
+position = Vector2(-1917, 11)
+script = ExtResource("3_h72oq")
+scene_name = &"garden"
+right_scene = NodePath("../RoomMain")
+left_scene = NodePath("../RoomDrawer")
