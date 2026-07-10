@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://c6u270b23uym3"]
 
-[ext_resource type="PackedScene" uid="uid://cqgx4ws657b2q" path="res://Scenes/Items/item.tscn" id="1_fr58d"]
+[ext_resource type="PackedScene" uid="uid://biq6f8hwqy3fe" path="res://Scenes/Items/draggable_item.tscn" id="1_pj8u5"]
+[ext_resource type="PackedScene" uid="uid://ji547x105ygt" path="res://Scenes/Items/selectable_item.tscn" id="2_gauwx"]
 
 [node name="Drawer" type="Node2D" unique_id=1893241586]
 
@@ -11,14 +12,18 @@ mouse_filter = 2
 color = Color(0, 0.29678607, 0.29649234, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="Item" parent="." unique_id=1194567880 instance=ExtResource("1_fr58d")]
-position = Vector2(1296, 400)
+[node name="DraggableItem" parent="." unique_id=1194567880 instance=ExtResource("1_pj8u5")]
+position = Vector2(430, 368)
 
-[node name="Item2" parent="." unique_id=326629896 instance=ExtResource("1_fr58d")]
-position = Vector2(728, 338)
+[node name="DraggableItem2" parent="." unique_id=1270729701 instance=ExtResource("1_pj8u5")]
+position = Vector2(1500, 278)
 
-[node name="Item3" parent="." unique_id=1570756731 instance=ExtResource("1_fr58d")]
-position = Vector2(1334, 770)
+[node name="DraggableItem3" parent="." unique_id=517984798 instance=ExtResource("1_pj8u5")]
+position = Vector2(1510, 686)
 
-[node name="Item4" parent="." unique_id=79226363 instance=ExtResource("1_fr58d")]
-position = Vector2(544, 696)
+[node name="DraggableItem4" parent="." unique_id=2139261226 instance=ExtResource("1_pj8u5")]
+position = Vector2(526, 804)
+
+[node name="SelectableItem" parent="." unique_id=1313055243 instance=ExtResource("2_gauwx")]
+modulate = Color(1, 0, 1, 1)
+position = Vector2(916, 292)

@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cves3uk3k6eom" path="res://Scenes/Levels/level_house.tscn" id="2_house"]
 [ext_resource type="Script" uid="uid://bcpvo1amc3yxw" path="res://Scripts/Navigation/level.gd" id="2_wowpa"]
 [ext_resource type="Script" uid="uid://dka27y4wtu5jt" path="res://Scripts/UI/nav_hud.gd" id="4_hud"]
+[ext_resource type="Script" uid="uid://psijmvouu5ry" path="res://Scripts/Inventory/inventory_manager.gd" id="5_wowpa"]
 
 [sub_resource type="Resource" id="Resource_wowpa"]
 script = ExtResource("2_wowpa")
@@ -12,6 +13,9 @@ scene = ExtResource("2_house")
 metadata/_custom_type_script = "uid://bcpvo1amc3yxw"
 
 [node name="Game" type="Node2D" unique_id=1031381308]
+
+[node name="InventoryManager" type="Node" parent="." unique_id=1818532659]
+script = ExtResource("5_wowpa")
 
 [node name="LevelManager" type="Node2D" parent="." unique_id=352043770]
 script = ExtResource("1_lm")

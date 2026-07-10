@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ji547x105ygt"]
+
+[ext_resource type="PackedScene" uid="uid://cqgx4ws657b2q" path="res://Scenes/Items/item.tscn" id="1_cfkq0"]
+[ext_resource type="Script" uid="uid://bdomoake0isgq" path="res://Scripts/Components/selectable_component.gd" id="2_2cyqm"]
+
+[node name="SelectableItem" unique_id=1194567880 instance=ExtResource("1_cfkq0")]
+
+[node name="SelectableComponent" type="Node" parent="." index="2" unique_id=617102883]
+script = ExtResource("2_2cyqm")
+item_name = &"test1"

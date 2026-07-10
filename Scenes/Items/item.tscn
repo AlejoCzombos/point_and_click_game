@@ -1,7 +1,5 @@
 [gd_scene format=3 uid="uid://cqgx4ws657b2q"]
 
-[ext_resource type="Script" uid="uid://b2ycgxhyuh7l3" path="res://Scripts/Components/draggable_component.gd" id="2_76mu4"]
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_470l7"]
 size = Vector2(283, 260.5)
 
@@ -20,6 +18,3 @@ shape = SubResource("RectangleShape2D_470l7")
 position = Vector2(1.5000038, 1.5000019)
 scale = Vector2(2.2109375, 2.0234375)
 texture = SubResource("CompressedTexture2D_eb5tt")
-
-[node name="DraggableComponent" type="Node" parent="." unique_id=399029121]
-script = ExtResource("2_76mu4")

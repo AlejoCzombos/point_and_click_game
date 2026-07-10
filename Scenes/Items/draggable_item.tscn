@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://biq6f8hwqy3fe"]
+
+[ext_resource type="PackedScene" uid="uid://cqgx4ws657b2q" path="res://Scenes/Items/item.tscn" id="1_346ub"]
+[ext_resource type="Script" uid="uid://b2ycgxhyuh7l3" path="res://Scripts/Components/draggable_component.gd" id="2_enmeo"]
+
+[node name="DraggableItem" unique_id=1194567880 instance=ExtResource("1_346ub")]
+
+[node name="DraggableComponent" type="Node" parent="." index="2" unique_id=253912106]
+script = ExtResource("2_enmeo")
