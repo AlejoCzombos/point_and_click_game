@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ctb7ukmoyjdn4"
-path="res://.godot/imported/ss2.png-4efac62d1aa6a2fbcae8ff253b608904.ctex"
+uid="uid://dj7wi5y8puby4"
+path="res://.godot/imported/water bucket.png-788679ff1c23031dab5fe4c0a12f23f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Inventory/Items/ss2.png"
-dest_files=["res://.godot/imported/ss2.png-4efac62d1aa6a2fbcae8ff253b608904.ctex"]
+source_file="res://Assets/Inventory/Items/water bucket.png"
+dest_files=["res://.godot/imported/water bucket.png-788679ff1c23031dab5fe4c0a12f23f7.ctex"]
 
 [params]
 

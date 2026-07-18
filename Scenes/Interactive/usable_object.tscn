@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://bhnibn0diqstd"]
+
+[ext_resource type="PackedScene" uid="uid://cqgx4ws657b2q" path="res://Scenes/Items/item.tscn" id="1_26c7i"]
+[ext_resource type="Script" uid="uid://b8vrct5ovb381" path="res://Scripts/Item/usable_object.gd" id="2_26c7i"]
+[ext_resource type="PackedScene" uid="uid://by0km6fa7lq68" path="res://Scenes/Components/usable_component.tscn" id="3_5pdt2"]
+
+[node name="UsableObject" unique_id=1194567880 instance=ExtResource("1_26c7i")]
+script = ExtResource("2_26c7i")
+interactions = null
+
+[node name="UsableComponent" parent="." index="2" unique_id=816239549 instance=ExtResource("3_5pdt2")]

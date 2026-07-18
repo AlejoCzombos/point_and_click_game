@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://lx6qnw6dtlqf"]
+
+[ext_resource type="Script" uid="uid://bdomoake0isgq" path="res://Scripts/Components/pickeable_component.gd" id="1_jy646"]
+
+[node name="PickeableComponent" type="Node" unique_id=858184116]
+script = ExtResource("1_jy646")
+item_name = &"test1"

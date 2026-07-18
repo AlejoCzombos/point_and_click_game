@@ -1,10 +1,10 @@
 [gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://kbdh5eovsjt0"]
 
 [ext_resource type="Script" uid="uid://bmrueliahxbix" path="res://Scripts/Inventory/inventory_item.gd" id="1_k6h4a"]
-[ext_resource type="Texture2D" uid="uid://cdq5rcc4ygj3y" path="res://Assets/Inventory/Items/lighter.png" id="2_qt57j"]
+[ext_resource type="Texture2D" uid="uid://c76vlqob3psre" path="res://Assets/Inventory/Items/bucket.png" id="2_qt57j"]
 
 [resource]
 script = ExtResource("1_k6h4a")
-name = &"test3"
+name = &"bucket"
 texture = ExtResource("2_qt57j")
 metadata/_custom_type_script = "uid://bmrueliahxbix"

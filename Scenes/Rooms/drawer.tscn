@@ -1,7 +1,9 @@
 [gd_scene format=3 uid="uid://c6u270b23uym3"]
 
 [ext_resource type="PackedScene" uid="uid://biq6f8hwqy3fe" path="res://Scenes/Items/draggable_item.tscn" id="1_pj8u5"]
-[ext_resource type="PackedScene" uid="uid://ji547x105ygt" path="res://Scenes/Items/selectable_item.tscn" id="2_gauwx"]
+[ext_resource type="PackedScene" uid="uid://ji547x105ygt" path="res://Scenes/Items/pickable_item.tscn" id="2_gauwx"]
+[ext_resource type="Resource" uid="uid://kbdh5eovsjt0" path="res://Resources/Inventory/bucket.tres" id="3_k6vno"]
+[ext_resource type="Resource" uid="uid://bvkvxhnaxx0q2" path="res://Resources/Inventory/test1.tres" id="4_goo5d"]
 
 [node name="Drawer" type="Node2D" unique_id=1893241586]
 
@@ -24,6 +26,10 @@ position = Vector2(1510, 686)
 [node name="DraggableItem4" parent="." unique_id=2139261226 instance=ExtResource("1_pj8u5")]
 position = Vector2(526, 804)
 
-[node name="SelectableItem" parent="." unique_id=1313055243 instance=ExtResource("2_gauwx")]
-modulate = Color(1, 0, 1, 1)
-position = Vector2(916, 292)
+[node name="PickeableItem" parent="." unique_id=945147553 instance=ExtResource("2_gauwx")]
+position = Vector2(982, 318)
+item = ExtResource("3_k6vno")
+
+[node name="PickableItem" parent="." unique_id=1712028409 instance=ExtResource("2_gauwx")]
+position = Vector2(1019, 686)
+item = ExtResource("4_goo5d")

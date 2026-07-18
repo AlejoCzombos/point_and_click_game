@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="InventoryItem" format=3 uid="uid://bjsw88h2310wi"]
+
+[ext_resource type="Script" uid="uid://bmrueliahxbix" path="res://Scripts/Inventory/inventory_item.gd" id="1_0xvqe"]
+[ext_resource type="Texture2D" uid="uid://i37m5cx1gn6d" path="res://Assets/Inventory/Items/water puddle.png" id="2_5btd8"]
+
+[resource]
+script = ExtResource("1_0xvqe")
+name = &"water_puddle"
+texture = ExtResource("2_5btd8")
+metadata/_custom_type_script = "uid://bmrueliahxbix"

@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://1lxlipm1ux5u"]
+
+[ext_resource type="Texture2D" uid="uid://shnffvi5t00e" path="res://Assets/Inventory/Items/InventoryTile.png" id="1_nxjtc"]
+[ext_resource type="Script" uid="uid://chbrr35la4gft" path="res://Scripts/UI/inventory_slot.gd" id="2_77amr"]
+[ext_resource type="Texture2D" uid="uid://c76vlqob3psre" path="res://Assets/Inventory/Items/bucket.png" id="2_tmbq5"]
+
+[node name="InventorySlot" type="NinePatchRect" unique_id=539363956]
+texture_filter = 1
+custom_minimum_size = Vector2(125, 125)
+offset_right = 125.0
+offset_bottom = 125.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+mouse_filter = 0
+texture = ExtResource("1_nxjtc")
+script = ExtResource("2_77amr")
+
+[node name="ItemTexture" type="TextureRect" parent="." unique_id=96729867]
+layout_mode = 0
+offset_right = 120.0
+offset_bottom = 120.0
+texture = ExtResource("2_tmbq5")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

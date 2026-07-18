@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://cu1touiny64yb"]
+
+[ext_resource type="Script" uid="uid://dka27y4wtu5jt" path="res://Scripts/UI/nav_hud.gd" id="1_sprlj"]
+[ext_resource type="PackedScene" uid="uid://cyri7tdey6cfe" path="res://Scenes/UI/inventory_ui_manager.tscn" id="2_ny26j"]
+
+[node name="HUD" type="CanvasLayer" unique_id=60000851]
+layer = 99
+script = ExtResource("1_sprlj")
+level_manager_path = NodePath("../LevelManager")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=642613994]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="FlowContainer" type="FlowContainer" parent="HBoxContainer" unique_id=2069120706]
+custom_minimum_size = Vector2(1700, 0)
+layout_mode = 2
+
+[node name="InventoryUIContainer" parent="HBoxContainer" unique_id=507367554 instance=ExtResource("2_ny26j")]
+layout_mode = 2
+
+[node name="LeftButton" type="Button" parent="." unique_id=1591101843]
+offset_left = 24.0
+offset_top = 500.0
+offset_right = 104.0
+offset_bottom = 580.0
+theme_override_font_sizes/font_size = 40
+text = "◀"
+
+[node name="RightButton" type="Button" parent="." unique_id=214720426]
+offset_left = 1542.0
+offset_top = 496.0
+offset_right = 1622.0
+offset_bottom = 576.0
+theme_override_font_sizes/font_size = 40
+text = "▶"
+
+[node name="BackButton" type="Button" parent="." unique_id=429195496]
+offset_left = 816.0
+offset_top = 966.0
+offset_right = 896.0
+offset_bottom = 1026.0
+theme_override_font_sizes/font_size = 24
+text = "▼"

@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://ji547x105ygt"]
+
+[ext_resource type="PackedScene" uid="uid://cqgx4ws657b2q" path="res://Scenes/Items/item.tscn" id="1_25nkt"]
+[ext_resource type="Script" uid="uid://cja4i2gexaxvt" path="res://Scripts/Item/pickable_item.gd" id="2_25nkt"]
+[ext_resource type="Texture2D" uid="uid://c2s8ohfmbtnuh" path="res://Assets/Inventory/Items/tape.png" id="4_qr65i"]
+[ext_resource type="PackedScene" uid="uid://lx6qnw6dtlqf" path="res://Scenes/Components/pickable_component.tscn" id="5_cxunv"]
+
+[node name="PickableItem" unique_id=1194567880 instance=ExtResource("1_25nkt")]
+script = ExtResource("2_25nkt")
+
+[node name="Sprite2D" parent="." index="1" unique_id=1543665484]
+texture = ExtResource("4_qr65i")
+
+[node name="PickableComponent" parent="." index="2" unique_id=858184116 instance=ExtResource("5_cxunv")]

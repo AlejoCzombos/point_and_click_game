@@ -1,5 +1,20 @@
 [gd_scene format=3 uid="uid://broomgarden02"]
 
+[ext_resource type="PackedScene" uid="uid://bhnibn0diqstd" path="res://Scenes/Interactive/usable_object.tscn" id="1_i7cj0"]
+[ext_resource type="Script" uid="uid://c2nci7h630br5" path="res://Scripts/Interactive/interaction.gd" id="2_4li01"]
+[ext_resource type="Resource" uid="uid://kbdh5eovsjt0" path="res://Resources/Inventory/bucket.tres" id="3_suqdl"]
+[ext_resource type="Resource" uid="uid://ca8d3qxp1ljct" path="res://Resources/Inventory/water bucket.tres" id="4_js4lc"]
+[ext_resource type="Texture2D" uid="uid://i37m5cx1gn6d" path="res://Assets/Inventory/Items/water puddle.png" id="5_suqdl"]
+
+[sub_resource type="Resource" id="Resource_gdt21"]
+script = ExtResource("2_4li01")
+required_item = ExtResource("3_suqdl")
+result_item = ExtResource("4_js4lc")
+metadata/_custom_type_script = "uid://c2nci7h630br5"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_js4lc"]
+size = Vector2(716, 160)
+
 [node name="RoomGarden" type="Node2D" unique_id=2101128973]
 
 [node name="Background" type="ColorRect" parent="." unique_id=423637843]
@@ -7,3 +22,18 @@ offset_right = 1920.0
 offset_bottom = 1080.0
 mouse_filter = 2
 color = Color(0.24, 0.42, 0.27, 1)
+
+[node name="UsableObject" parent="." unique_id=1194567880 instance=ExtResource("1_i7cj0")]
+position = Vector2(994, 701)
+interactions = Array[ExtResource("2_4li01")]([SubResource("Resource_gdt21")])
+
+[node name="CollisionShape2D" parent="UsableObject/Area2D" parent_id_path=PackedInt32Array(1194567880, 1424344276) index="0" unique_id=172557902]
+position = Vector2(18, 65)
+shape = SubResource("RectangleShape2D_js4lc")
+
+[node name="Sprite2D" parent="UsableObject" index="1" unique_id=1543665484]
+position = Vector2(-26.99997, -39.99997)
+scale = Vector2(5.6027584, 6.117841)
+texture = ExtResource("5_suqdl")
+
+[editable path="UsableObject"]

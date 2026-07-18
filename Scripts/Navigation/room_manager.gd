@@ -15,7 +15,7 @@ var _is_transitioning: bool = false
 @onready var _viewport_width: float = get_viewport_rect().size.x
 
 func _ready() -> void:
-	_rooms = await _find_rooms()
+	_rooms = _find_rooms()
 
 	for child in get_children():
 		if child is Room:
@@ -74,7 +74,7 @@ func load_room_by_name(room_name: StringName) -> void:
 ## Navigate to a room in THIS level. `direction` only matters for slide types.
 func go_to(
 	target_room: Room, 
-	transition_type: Constants.TransitionType,
+	_transition_type: Constants.TransitionType,
 	direction: Constants.Direction = Constants.Direction.RIGHT,
 	record_history: bool = true
 	) -> void:
@@ -88,11 +88,11 @@ func go_to(
 	if record_history and _current:
 		_history.push_back({
 			"id": _current.scene_name,
-			"transition": int(transition_type),
+			"transition": int(_transition_type),
 			"dir": int(_opposite(direction)),
 		})
 
-	await _run_transition(_current, target_room, int(transition_type), int(direction))
+	await _run_transition(_current, target_room, int(_transition_type), int(direction))
 
 func can_go_back() -> bool:
 	return not _history.is_empty()
@@ -111,10 +111,10 @@ func go_back() -> void:
 func _opposite(direction: int) -> int:
 	return Constants.Direction.RIGHT if direction == Constants.Direction.LEFT else Constants.Direction.LEFT
 
-func _run_transition(from_room: Room, to_room: Room, transition_type: int, direction: int) -> void:
+func _run_transition(from_room: Room, to_room: Room, _transition_type: int, direction: int) -> void:
 	_is_transitioning = true
 
-	match transition_type:
+	match _transition_type:
 		Constants.TransitionType.FADE:
 			await _fade_swap(from_room, to_room)
 		Constants.TransitionType.SLIDE_BLACK:
